@@ -34,8 +34,8 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- Boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <!-- Font Awesome 4 -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="{{ asset('assets') }}/fontawesome-free-5/css/all.min.css">
   </head>
