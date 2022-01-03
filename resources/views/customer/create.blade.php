@@ -33,57 +33,63 @@
                             <h3 class="box-title">{{ __('breadcram.create') }}</h3>
                         </div>
                         <div class="box-body row" style="padding: 10px;">
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">{{ __('form.name') }} <span style="font-size: 10px; color: red;">*</span></label>
-                                <input name="name" value="{{ old('name') }}" required autocomplete="off" class="form-control">
-                                @error('name')
-                                    <p style="color: red;">{{ $message }}</p>
-                                @enderror
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label for="exampleInputEmail1">{{ __('form.name') }} <span style="font-size: 10px; color: red;">*</span></label>
+                                    <input name="name" value="{{ old('name') }}" autofocus required autocomplete="off" class="form-control">
+                                    @error('name')
+                                        <p style="color: red;">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="exampleInputEmail1">{{ __('form.phone') }}</label>
+                                    <input name="phone" value="{{ old('phone') }}" autocomplete="off" class="form-control">
+                                    @error('phone')
+                                        <p style="color: red;">{{ $message }}</p>
+                                    @enderror
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">{{ __('form.address') }}</label>
-                                <input name="address" value="{{ old('address') }}" autocomplete="off" class="form-control">
-                                @error('address')
-                                    <p style="color: red;">{{ $message }}</p>
-                                @enderror
+                            <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label for="exampleInputEmail1">{{ __('form.address') }}</label>
+                                    <input name="address" value="{{ old('address') }}" autocomplete="off" class="form-control">
+                                    @error('address')
+                                        <p style="color: red;">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="exampleInputEmail1" style="margin-bottom: 10px;">{{ __('form.status') }}</label><br>
+                                    <input type="radio" name="status" value="1" checked>
+                                    <label for="exampleInputEmail1">{{ __('form.active') }}</label>
+                                    &emsp;&emsp;<input type="radio" name="status" value="0">
+                                    <label for="exampleInputEmail1">{{ __('form.inactive') }}</label>
+                                </div> 
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-12">
+                                    <label for="exampleInputEmail1">{{ __('form.description') }}</label>
+                                    <textarea name="description" cols="30" rows="2" class="form-control">{{ old('description') }}</textarea>
+                                    @error('description')
+                                        <p style="color: red;">{{ $message }}</p>
+                                    @enderror
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">{{ __('form.phone') }}</label>
-                                <input name="phone" value="{{ old('phone') }}" autocomplete="off" class="form-control">
-                                @error('phone')
-                                    <p style="color: red;">{{ $message }}</p>
-                                @enderror
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1" style="margin-bottom: 10px;">{{ __('form.status') }}</label><br>
-                                <input type="radio" name="status" value="1">
-                                <label for="exampleInputEmail1">{{ __('form.active') }}</label>
-                                &emsp;&emsp;<input type="radio" name="status" value="0">
-                                <label for="exampleInputEmail1">{{ __('form.inactive') }}</label>
-                            </div>                            
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label for="exampleInputFile">{{ __('form.image') }}</label>
-                                <input type="file" name="image" id="exampleInputFile">
-                                @error('image')
-                                    <p style="color: red;">{{ $message }}</p>
-                                @enderror
+                        <div class="col-sm-3">
+                            <div class="row">
+                                <div class="form-group col-sm-12">
+                                    <label for="exampleInputFile">{{ __('form.image') }}</label>
+                                    <input type="file" name="image" id="exampleInputFile">
+                                    @error('image')
+                                        <p style="color: red;">{{ $message }}</p>
+                                    @enderror
+                                </div>                            
                             </div>
                         </div>
                     </div>
                     <div class="row" style="padding: 0px 10px;">
                         <div class="col-sm-8">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">{{ __('form.description') }}</label>
-                                <textarea name="description" cols="30" rows="2" class="form-control">{{ old('description') }}</textarea>
-                                @error('description')
-                                    <p style="color: red;">{{ $message }}</p>
-                                @enderror
-                            </div>
                             <div class="form-group">
                                 <input type="radio" value="save_new" name="save_opt" checked> <label for="exampleInputEmail1">{{ __('form.save&create_new') }}</label>
                                 &emsp;&emsp;<input type="radio" value="save_edit" name="save_opt"> <label for="exampleInputEmail1">{{ __('form.save&edit') }}</label>

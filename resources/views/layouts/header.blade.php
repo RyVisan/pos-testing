@@ -35,4 +35,6 @@
     <!-- Google Font CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
     <link rel="stylesheet" href="{{ asset('assets') }}/custom.css">
+    <!-- Data Tables CDN -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 </head>

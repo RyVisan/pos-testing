@@ -14,6 +14,9 @@ class CustomerController extends Controller
      */
     public function index()
     {
+        // $data = [
+        //     'customers' => Customer::orderBy()->get(),
+        // ];
         return view('customer.index');
     }
 
@@ -46,7 +49,7 @@ class CustomerController extends Controller
             if(!File::isDirectory(public_path('images/customers/'))){
                 File::makeDirectory(public_path('images/customers/'), 0777, true, true);
             }
-            
+
             $customers->update([
                 'image' => $image_name
             ]);
@@ -74,13 +77,11 @@ class CustomerController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Customer  $customer
-     * @return \Illuminate\Http\Response
      */
     public function edit(Customer $customer)
     {
-        //
+        // dd($customer->id);
+        // $customer = Customer::find($customer->id);
     }
 
     /**
