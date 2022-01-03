@@ -6,7 +6,7 @@ return [
     'email' => 'Email',
     'status' => 'Status',
     'active' => 'Active',
-    'inactvie' => 'Inactvie',
+    'inactive' => 'Inactive',
     'visible' => 'Visible',
     'date' => 'Date',
     'address' => 'Address',
@@ -14,4 +14,8 @@ return [
     'note' => 'Note',
     'phone' => 'Phone',
     'image' => 'Image',
+
+    'save&create_new' => 'Save and Create New',
+    'save&edit' => 'Save and Edit Item',
+    'save&list' => 'Save and View List',
 ];

@@ -16,6 +16,7 @@ return [
         'income_category' => 'Income Category',
     ],
     'inventory' => [
+        'inventory' => 'Inventory',
         'stock_in' => 'Stock In',
         'stock_out' => 'Stock Out',
         'stock_adjustment' => 'Stock Adjustment',
@@ -23,6 +24,7 @@ return [
     ],
     'main_data' => 'MAIN DATA',
     'report' => [
+        'report' => 'Report',
         'sale' => 'Sale',
         'revenue' => 'Revenue',
         'expense' => 'Expense',
@@ -31,7 +33,7 @@ return [
     ],
     'product' => [
         'product' => 'Product',
-        'product_cateogry' => 'Product Cateogry',
+        'product_category' => 'Product Cateogry',
     ],
     'customer' => 'Customer',
     'supplier' => 'Supplier',
@@ -43,6 +45,6 @@ return [
     'development_mode' => 'DDEVELOPMENT MODE',
     'setting' => 'Setting',
     'currency' => 'Currency',
-    'payment-method' => 'Payment Method',
+    'payment_method' => 'Payment Method',
     'data_backup' => 'Data Backup',
 ];

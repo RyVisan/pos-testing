@@ -62,20 +62,20 @@
           </a>
           <ul class="treeview-menu" style="display: none;">
             <li><a href="#"><i class="fa fa-cube" aria-hidden="true"></i> {{ __('sidebar.product.product') }}</a></li>
-            <li><a href="#"><i class="fa fa-cubes" aria-hidden="true"></i> {{ __('sidebar..product.product_category') }}</a></li>
+            <li><a href="#"><i class="fa fa-cubes" aria-hidden="true"></i> {{ __('sidebar.product.product_category') }}</a></li>
           </ul>
         </li>
         <li class="@yield('customer')"><a href="{{ route('customer.index') }}"><i class="fa fa-users" aria-hidden="true"></i> <span>{{ __('sidebar.customer') }}</span></a></li>
         <li><a href="#"><i class="far fa-address-book"></i> &nbsp;&nbsp;&nbsp;<span>{{ __('sidebar.supplier') }}</span></a></li>
         <li class="header">{{ __('sidebar.management') }}</li>
         <li><a href="#"><i class="fa fa-user"></i> <span>{{ __('sidebar.user') }}</span></a></li>
-        <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>{{ __('sidebar.roles') }}</span></a></li>
-        <li><a href="#"><i class="fa fa-check-square" aria-hidden="true"></i> <span>{{ __('sidebar.abilitier') }}</span></a></li>
         <li class="header">{{ __('sidebar.development_mode') }}</li>
         <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> <span>{{ __('sidebar.setting') }}</span></a></li>
         <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i> <span>{{ __('sidebar.currency') }}</span></a></li>
         <li><a href="#"><i class="fas fa-money-check-alt"></i> &nbsp;<span>{{ __('sidebar.payment_method') }}</span></a></li>
         <li><a href="#"><i class="fa fa-database" aria-hidden="true"></i> <span>{{ __('sidebar.data_backup') }}</span></a></li>
+        <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>{{ __('sidebar.roles') }}</span></a></li>
+        <li><a href="#"><i class="fa fa-check-square" aria-hidden="true"></i> <span>{{ __('sidebar.abilities') }}</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
