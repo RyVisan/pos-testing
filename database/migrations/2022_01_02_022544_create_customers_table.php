@@ -19,6 +19,7 @@ class CreateCustomersTable extends Migration
             $table->boolean('status')->default(1);
             $table->string('phone', 20)->nullable();
             $table->string('address', 255)->nullable();
+            $table->string('image')->nullable();
             $table->text('description', 255)->nullable();
             $table->timestamps();
         });

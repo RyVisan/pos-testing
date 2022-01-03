@@ -24,7 +24,7 @@ class CustomerRequest extends FormRequest
             'phone' => 'nullable|digits_between:9,10|integer',
             'address' => 'max:255',
             'description' => 'max:255',
-            'image' => 'mimes:jpeg,jpg,png',
+            'image' => 'mimes:jpeg,jpg,png|max:1000000',
         ];
     }
 }

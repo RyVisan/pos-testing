@@ -36,7 +36,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">{{ __('form.name') }} <span style="font-size: 10px; color: red;">*</span></label>
-                                <input name="name" value="{{ old('name') }}" required autofocus autocomplete="off" class="form-control">
+                                <input name="name" value="{{ old('name') }}" required autocomplete="off" class="form-control">
                                 @error('name')
                                     <p style="color: red;">{{ $message }}</p>
                                 @enderror
@@ -59,7 +59,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1" style="margin-bottom: 10px;">{{ __('form.status') }}</label><br>
-                                <input type="radio" name="status" value="1" checked>
+                                <input type="radio" name="status" value="1">
                                 <label for="exampleInputEmail1">{{ __('form.active') }}</label>
                                 &emsp;&emsp;<input type="radio" name="status" value="0">
                                 <label for="exampleInputEmail1">{{ __('form.inactive') }}</label>

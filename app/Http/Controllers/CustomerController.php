@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use App\Http\Requests\CustomerRequest;
 
 class CustomerController extends Controller
@@ -36,6 +37,21 @@ class CustomerController extends Controller
             'address' => $request->address,
             'description' => $request->description,
         ]);
+
+        if($request->hasFile('image')){
+            $file = $request->file('image');
+            $image_name = $customers->id.'_'.time().'.'.$file->getClientOriginalExtension();
+            $file->move(public_path('images/customers/'), $image_name);
+
+            if(!File::isDirectory(public_path('images/customers/'))){
+                File::makeDirectory(public_path('images/customers/'), 0777, true, true);
+            }
+            
+            $customers->update([
+                'image' => $image_name
+            ]);
+        }
+
         $url = route('customer.index');
         if($request->save_opt=='save_edit'){
             $url = route('customer.edit');
