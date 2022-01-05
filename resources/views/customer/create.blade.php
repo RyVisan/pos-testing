@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title-project', 'Customer')
 @section('customer', 'active')
 @section('content')
     <section class="content-header">
