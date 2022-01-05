@@ -21,7 +21,7 @@ class CustomerRequest extends FormRequest
     {
         return [
             'name' => 'required|min:2|max:50',
-            'phone' => 'nullable|digits_between:9,10|integer',
+            'phone' => 'nullable|digits_between:9,10|numeric',
             'address' => 'max:255',
             'description' => 'max:255',
             'image' => 'mimes:jpeg,jpg,png|max:1000000',

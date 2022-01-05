@@ -11,15 +11,21 @@
         </ol>
     </section>
     <section class="content" style="margin-top: 10px;">
-        <div class="box" style="padding: 5px;">
+        @if (Session::has('success'))
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                <h5> <i class="icon fa fa-check"></i> {{ Session::get('success') }}</h5>
+            </div>
+        @endif
+        <div class="box box-primary" style="padding: 5px;">
             <table id="table_id" class="table-striped table-bordered">
                 <thead>
                     <tr>
                         <th class="text-center" width="5%">{{ __('table.no') }}</th>
                         <th class="text-center">{{ __('table.name') }}</th>
-                        <th class="text-center" width="15%">{{ __('table.phone') }}</th>
+                        <th class="text-center" width="13%">{{ __('table.phone') }}</th>
                         <th class="text-center" width="10%">{{ __('table.status') }}</th>
-                        <th class="text-center" width="15%">{{ __('table.action') }}</th>
+                        <th class="text-center" width="10%">{{ __('table.action') }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,14 +36,21 @@
                             <td class="text-center">{{ $customer->phone }}</td>
                             <td class="text-center">
                                 @if ($customer->status==1)
-                                    <span class="badge bg-success">{{ __('table.active') }}</span>
+                                    <span style="color: green;"><b>{{ __('table.active') }}</b></span>
                                 @else
-                                    <span class="badge bg-danger">{{ __('table.inactive') }}</span>
+                                    <span style="color: red;"><b>{{ __('table.inactive') }}</b></span>
                                 @endif
                             <td class="text-center">
-                                <a href="#">Show</a> |
-                                <a href="#">Edit</a> |
-                                <a href="#">Delete</a>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#"><i class="far fa-eye"></i> <b>Show</b></a></li>
+                                      <li><a href="#"><i class="far fa-edit"></i> <b>Edit</b></a></li>
+                                      <li><a href="{{ route('customer.destroy', $customer) }}"><i class="far fa-trash-alt"></i> <b>Delete</b></a></li>
+                                    </ul>
+                                </div>
                             </td>
                         </tr>
                     @endforeach

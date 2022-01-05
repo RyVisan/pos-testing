@@ -62,9 +62,9 @@
                                 <div class="form-group col-sm-6">
                                     <label for="exampleInputEmail1" style="margin-bottom: 10px;">{{ __('form.status') }}</label><br>
                                     <input type="radio" name="status" value="1" checked>
-                                    <label for="exampleInputEmail1">{{ __('form.active') }}</label>
+                                    <label for="exampleInputEmail1" style="color: green;">{{ __('form.active') }}</label>
                                     &emsp;&emsp;<input type="radio" name="status" value="0">
-                                    <label for="exampleInputEmail1">{{ __('form.inactive') }}</label>
+                                    <label for="exampleInputEmail1" style="color: red;">{{ __('form.inactive') }}</label>
                                 </div> 
                             </div>
                             <div class="row">
@@ -85,7 +85,9 @@
                                     @error('image')
                                         <p style="color: red;">{{ $message }}</p>
                                     @enderror
-                                </div>                            
+                                    <br>
+                                    <img src="{{ asset('images/default.jpg') }}" alt="" width="160px" height="160px" style="border: 1px solid gray;">
+                                </div>                           
                             </div>
                         </div>
                     </div>
