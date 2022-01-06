@@ -12,6 +12,6 @@ Route::prefix('customer')->name('customer.')->group(function(){
 
 Route::get('/', function () {
     return view('index');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth']);
 
 require __DIR__.'/auth.php';
