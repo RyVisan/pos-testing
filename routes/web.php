@@ -15,3 +15,4 @@ Route::get('/', function () {
 })->middleware(['auth']);
 
 require __DIR__.'/auth.php';
+    

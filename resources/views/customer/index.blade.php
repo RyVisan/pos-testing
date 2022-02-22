@@ -56,13 +56,54 @@
                     @endforeach
                 </tbody>
             </table>
+            <div style="height: 500px; width: 900px; margin: auto;">
+                <canvas id="myChart"></canvas>
+            </div>
         </div>
-</section>
+
+    </section>
 @endsection
 @section('script')
     <script>
+        const labels = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December',
+        ];
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb( 255, 0, 0 )',
+                borderColor: 'rgb( 71, 255, 12 )',
+                data: [0, 10, 69, 30, 48, 38, 45, 25, 99, 80, 77, 55,],
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {}
+        };
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+        
         $(document).ready(function(){
             $('#table_id').DataTable();
         });
+        
     </script>
 @endsection
